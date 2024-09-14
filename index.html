@@ -3,16 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bangla Numbers Flashcards</title>
+    <title>Bangla Learning App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Learn the Bangla Vowles!</h1>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#vowels">Vowels</a></li>
+            <li><a href="#consonants">Consonants</a></li>
+            <li><a href="#numbers">Numbers</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div id="home" class="container">
+        <h1>Welcome to the Bangla Learning App!</h1>
+        <p>Click the links above to explore different sections.</p>
+    </div>
+
+    <div id="vowels" class="container">
+        <h1>Learn Vowels</h1>
         <div class="flashcards">
-            <!-- Flashcards will be dynamically generated here -->
+            <!-- Vowel flashcards will be dynamically generated here -->
         </div>
     </div>
+
+    <div id="consonants" class="container">
+        <h1>Learn Consonants</h1>
+        <div class="flashcards-consonants">
+            <!-- Consonant flashcards will be dynamically generated here -->
+        </div>
+    </div>
+
+    <div id="numbers" class="container">
+        <h1>Learn Numbers</h1>
+        <div class="flashcards-numbers"></div>
+            <!-- Number flashcards will be dynamically generated here -->
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

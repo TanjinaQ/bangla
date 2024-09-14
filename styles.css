@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -9,14 +11,54 @@ body {
     max-width: 800px;
 }
 
-h1 {
-    color: #2e8b57;
+/* Navbar styling */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Main content section padding to avoid overlap with the navbar */
+.container {
+    padding-top: 80px; /* To prevent content from hiding under the fixed navbar */
 }
 
 .flashcards {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    justify-items: center;
+    padding: 20px;
 }
 
 .card {
@@ -73,20 +115,21 @@ h1 {
 
 .card:hover {
     transform: scale(1.1); /* Slightly scale the card */
-    width: 200px; /* Make the card wider on hover */
-    height: 140px; /* Slightly increase height */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
 }
 
-/* Show both the letter and the name on hover */
+.card:hover .card-front {
+    background-color: #f06292; /* Change color on hover */
+    color: white;
+}
+
 .card-front .bangla-letter {
     font-size: 36px;
-    transition: transform 0.3s ease;
 }
 
 .card-front .vowel-name {
-    opacity: 0;
     font-size: 18px;
+    opacity: 0;
     transition: opacity 0.3s ease;
     position: absolute;
     bottom: 10px;
@@ -99,7 +142,22 @@ h1 {
     opacity: 1; /* Show vowel name on hover */
 }
 
-.card:hover .card-front {
-    background-color: #f06292; /* Change color on hover */
-    color: white;
+/* Other styles remain unchanged */
+
+/* Flashcards for consonants */
+.flashcards-consonants {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+/* Flashcards for numbers */
+.flashcards-numbers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
 }
