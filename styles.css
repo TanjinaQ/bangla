@@ -1,14 +1,10 @@
+/* Basic Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     text-align: center;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    margin: 50px auto;
-    max-width: 800px;
 }
 
 /* Navbar styling */
@@ -53,9 +49,10 @@ body {
     padding-top: 80px; /* To prevent content from hiding under the fixed navbar */
 }
 
-.flashcards {
+/* Flashcards styling */
+.flashcards, .flashcards-consonants, .flashcards-numbers {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     justify-items: center;
     padding: 20px;
@@ -123,11 +120,11 @@ body {
     color: white;
 }
 
-.card-front .bangla-letter {
+.bangla-letter {
     font-size: 36px;
 }
 
-.card-front .vowel-name {
+.vowel-name {
     font-size: 18px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -136,28 +133,4 @@ body {
     left: 50%;
     transform: translateX(-50%);
     color: white;
-}
-
-.card:hover .vowel-name {
-    opacity: 1; /* Show vowel name on hover */
-}
-
-/* Other styles remain unchanged */
-
-/* Flashcards for consonants */
-.flashcards-consonants {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
-    padding: 20px;
-}
-
-/* Flashcards for numbers */
-.flashcards-numbers {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    justify-items: center;
-    padding: 20px;
 }
