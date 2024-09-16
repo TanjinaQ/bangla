@@ -45,9 +45,8 @@ body {
     border-radius: 5px;
 }
 
-/* Main content section padding to avoid overlap with the navbar */
+/* Main content section */
 .container {
-    padding-top: 80px; /* To prevent content from hiding under the fixed navbar */
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -63,9 +62,14 @@ body {
     text-align: left; /* Align text to the left */
 }
 
-#home h1 {
-    margin-top: 40px;
+#home h1,
+#vowels h1,
+#consonants h1,
+#numbers h1 {
+    margin-top: 100px; /* Add enough top margin to prevent overlap */
+    margin-bottom: 20px; /* Add space below the titles */
     font-size: 2em; /* Adjusted for better scaling */
+    text-align: center; /* Center-align the titles */
 }
 
 #home p,

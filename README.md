@@ -38,3 +38,8 @@ To get the Bangla application up and running on your local machine, follow these
      ```
    - This will open the application in your default web browser.
 
+
+### Prerequisites
+
+- Yes, this is an absolutely unfinished buggy web application. Feel free to look at the work in progress in our Trello board.
+- For issue tracking: https://trello.com/b/lmrxqe5e/bangla

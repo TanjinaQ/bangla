@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const vowelsContainer = document.querySelector('.flashcards');
     const consonantsContainer = document.querySelector('.flashcards-consonants');
     const numbersContainer = document.querySelector('.flashcards-numbers');
+    const navbar = document.querySelector('.navbar');
 
     // Create Flashcard instances
     const vowelFlashcards = new Flashcard(vowels, vowelsContainer);
@@ -26,27 +27,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Function to scroll to the selected section with dynamic offset
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const offset = navbar.offsetHeight + 20; // Add extra space to the navbar's height as the offset
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const sectionRect = section.getBoundingClientRect().top;
+        const sectionPosition = sectionRect - bodyRect;
+        const offsetPosition = sectionPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+
     // Event listeners for navigation links
     document.getElementById('home-link').addEventListener('click', function (event) {
         event.preventDefault();
         showSection('home');
+        scrollToSection('home');
     });
 
     document.getElementById('vowels-link').addEventListener('click', function (event) {
         event.preventDefault();
         showSection('vowels');
+        scrollToSection('vowels');
     });
 
     document.getElementById('consonants-link').addEventListener('click', function (event) {
         event.preventDefault();
         showSection('consonants');
+        scrollToSection('consonants');
     });
 
     document.getElementById('numbers-link').addEventListener('click', function (event) {
         event.preventDefault();
         showSection('numbers');
+        scrollToSection('numbers');
     });
 
     // Initially show the home section
     showSection('home');
+    scrollToSection('home');
 });
