@@ -23,11 +23,11 @@ body {
     padding: 0;
     overflow: hidden;
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
     justify-content: center;
 }
 
 .navbar li {
-    display: inline;
     padding: 0 20px;
 }
 
@@ -36,6 +36,7 @@ body {
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
+    display: block; /* Ensure the clickable area is the entire block */
     transition: background-color 0.3s;
 }
 
@@ -47,6 +48,8 @@ body {
 /* Main content section padding to avoid overlap with the navbar */
 .container {
     padding-top: 80px; /* To prevent content from hiding under the fixed navbar */
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Styling for the content box on the home page */
@@ -57,11 +60,12 @@ body {
     max-width: 800px; /* Limit the width to align with the flashcards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
     border-radius: 10px; /* Optional: add rounded corners */
+    text-align: left; /* Align text to the left */
 }
 
 #home h1 {
     margin-top: 40px;
-    font-size: 2.5em;
+    font-size: 2em; /* Adjusted for better scaling */
 }
 
 #home p,
@@ -73,7 +77,7 @@ body {
 /* Default list styling */
 #home ul {
     list-style-type: disc; /* Restore default bullet points */
-    padding-left: 40px; /* Add padding to align with the rest of the text */
+    padding-left: 20px; /* Add padding to align with the rest of the text */
     text-align: left; /* Align list text to the left */
 }
 
@@ -88,15 +92,16 @@ body {
 /* Flashcards styling */
 .flashcards, .flashcards-consonants, .flashcards-numbers {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns */
     gap: 20px;
     justify-items: center;
     padding: 20px;
 }
 
 .card {
-    width: 120px;
-    height: 120px;
+    width: 100%; /* Make width relative */
+    max-width: 150px; /* Limit the maximum width */
+    height: 150px;
     background-color: #ffffff;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -104,12 +109,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: bold;
     color: #333;
     cursor: pointer;
     perspective: 1000px;
-    transition: transform 0.6s ease, background-color 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
+    transition: transform 0.6s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-inner {
@@ -147,7 +152,7 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.1); /* Slightly scale the card */
+    transform: scale(1.05); /* Slightly scale the card */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
 }
 
@@ -169,4 +174,46 @@ body {
     left: 50%;
     transform: translateX(-50%);
     color: white;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack navigation items vertically on small screens */
+    }
+
+    .navbar li {
+        padding: 10px 0; /* Add padding between items */
+    }
+
+    .card {
+        height: 120px; /* Adjust card height for smaller screens */
+    }
+
+    .content-box {
+        margin: 0 10px; /* Add margin on smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    #home h1 {
+        font-size: 1.8em; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: 100px; /* Further adjust card height */
+    }
+
+    .content-box {
+        margin: 0 5px; /* Add margin on smaller screens */
+    }
+
+    #home h1 {
+        font-size: 1.5em; /* Adjust font size */
+    }
+
+    .navbar a {
+        font-size: 16px; /* Adjust font size in navbar */
+    }
 }
