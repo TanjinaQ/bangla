@@ -3,19 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
     <title>Bangla Learning App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navbar Section -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home" id="home-link">Home</a></li>
-            <li><a href="#vowels" id="vowels-link">Vowels</a></li>
-            <li><a href="#consonants" id="consonants-link">Consonants</a></li>
-            <li><a href="#numbers" id="numbers-link">Numbers</a></li>
-        </ul>
-    </nav>
+    <header class="header" id="header">
+        <nav class="nav container">
+           <a href="#" class="nav__logo">Project:Bangla</a>
+
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li class="nav__item">
+                    <a href="#home" id="home-link" class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Home</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#vowels" id="vowels-link"class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Vowels</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#consonants" id="consonants-link"class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Consonants</span>
+                    </a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="#numbers"id="numbers-link"class="nav__link">
+                       <i class="ri-arrow-right-up-line"></i>
+                       <span>Numbers</span>
+                    </a>
+                 </li>
+
+              <!-- Close button -->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-large-line"></i>
+              </div>
+
+              <div class="nav__social">
+                 <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
+                    <i class="ri-instagram-line"></i>
+                 </a>
+
+                 <a href="https://github.com/TanjinaQ/bangla" target="_blank" class="nav__social-link">
+                    <i class="ri-github-line"></i>
+                 </a>
+
+                 <a href="https://dribbble.com/" target="_blank" class="nav__social-link">
+                    <i class="ri-dribbble-line"></i>
+                 </a>
+
+                 <a href="https://www.linkedin.com/" target="_blank" class="nav__social-link">
+                    <i class="ri-linkedin-box-line"></i>
+                 </a>
+              </div>
+           </div>
+
+           <!-- Toggle button -->
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
 
     <!-- Main Content Section -->
     <div id="home" class="container">
