@@ -42,31 +42,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Event listeners for navigation links
-    document.getElementById('home-link').addEventListener('click', function (event) {
-        event.preventDefault();
-        showSection('home');
-        scrollToSection('home');
+    // Generic function to handle navigation click events
+    function handleNavClick(event, sectionId) {
+    event.preventDefault();
+    showSection(sectionId);
+    scrollToSection(sectionId);
+    }
+
+    // Add event listeners for navigation links
+    const navLinks = [
+    { id: 'home-link', section: 'home' },
+    { id: 'vowels-link', section: 'vowels' },
+    { id: 'consonants-link', section: 'consonants' },
+    { id: 'numbers-link', section: 'numbers' }
+    ];
+
+    navLinks.forEach(link => {
+        const element = document.getElementById(link.id);
+        if (element) {
+            element.addEventListener('click', (event) => handleNavClick(event, link.section));
+        }
     });
 
-    document.getElementById('vowels-link').addEventListener('click', function (event) {
-        event.preventDefault();
-        showSection('vowels');
-        scrollToSection('vowels');
-    });
 
-    document.getElementById('consonants-link').addEventListener('click', function (event) {
-        event.preventDefault();
-        showSection('consonants');
-        scrollToSection('consonants');
-    });
-
-    document.getElementById('numbers-link').addEventListener('click', function (event) {
-        event.preventDefault();
-        showSection('numbers');
-        scrollToSection('numbers');
-    });
-
+    
     // Initially show the home section
     showSection('home');
     scrollToSection('home');
