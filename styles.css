@@ -145,12 +145,14 @@ body {
     border-radius: 10px;
 }
 
+
+
 .card-front {
-    background-color: #ffeb3b;
+    background-color: #7fbc85; /* Change to light green */
 }
 
 .card-back {
-    background-color: #4caf50;
+    background-color: #d47c7c;
     transform: rotateY(180deg);
     color: #fff;
 }
@@ -161,7 +163,7 @@ body {
 }
 
 .card:hover .card-front {
-    background-color: #f06292; /* Change color on hover */
+    background-color: #286751; /* Change color on hover */
     color: white;
 }
 
