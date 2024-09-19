@@ -190,6 +190,12 @@ body {
   color: white;
 }
 
+/* Add whitespace above the "Learn Vowels in Words" title */
+#vowels-container h2 {
+  margin-top: 10rem; /* Adds space above the title */
+}
+
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .navbar ul {
