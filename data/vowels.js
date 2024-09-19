@@ -1,5 +1,5 @@
 export const vowels = [
-    { bangla: 'অ', english: 'aw', pronunciation: '"o"bvious', name: 'Shorey Aw' },
+    { bangla: 'অ', english: 'aw', pronunciation: '"o"bvious', name: 'Shorey Aw', hasLink: true },
     { bangla: 'আ', english: 'aa', pronunciation: '"a"rmy', name: 'Shorey Aa' },
     { bangla: 'ই', english: 'i', pronunciation: '"e"ast', name: 'Rossho E' },
     { bangla: 'ঈ', english: 'ii', pronunciation: '"ea"gle', name: 'Dirgho Ee' },

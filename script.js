@@ -64,7 +64,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
+    // Handle "Let's do it." button click
+    const letsDoItButton = document.getElementById('lets-do-it-button');
+    if (letsDoItButton) {
+        letsDoItButton.addEventListener('click', function() {
+            // Show the vowels section and scroll to it
+            const vowelsSection = document.getElementById('vowels');
+            if (vowelsSection) {
+                showSection('vowels'); // Show the vowels section
+                scrollToSection('vowels'); // Scroll to the vowels section
+            }
+        });
+    }
     
     // Initially show the home section
     showSection('home');
